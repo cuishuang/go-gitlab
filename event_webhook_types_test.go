@@ -114,8 +114,8 @@ func TestIssueCommentEventUnmarshal(t *testing.T) {
 		t.Errorf("User ID is %d, want %d", event.User.ID, 42)
 	}
 
-	if event.ObjectAttributes.NoteableType != "Issue" {
-		t.Errorf("NoteableType is %v, want %v", event.ObjectAttributes.NoteableType, "Issue")
+	if event.ObjectAttributes.notableType != "Issue" {
+		t.Errorf("notableType is %v, want %v", event.ObjectAttributes.notableType, "Issue")
 	}
 
 	if event.Issue.Title != "test_issue" {

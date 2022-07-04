@@ -29,7 +29,7 @@ func TestGetEpicNote(t *testing.T) {
 
 	mux.HandleFunc("/api/v4/groups/1/epics/4329/notes/3", func(w http.ResponseWriter, r *http.Request) {
 		testMethod(t, r, http.MethodGet)
-		fmt.Fprint(w, `{"id":3,"type":null,"body":"foo bar","attachment":null,"system":false,"noteable_id":4392,"noteable_type":"Epic","resolvable":false,"noteable_iid":null}`)
+		fmt.Fprint(w, `{"id":3,"type":null,"body":"foo bar","attachment":null,"system":false,"notable_id":4392,"notable_type":"Epic","resolvable":false,"notable_iid":null}`)
 	})
 
 	note, _, err := client.Notes.GetEpicNote("1", 4329, 3, nil)
@@ -38,14 +38,14 @@ func TestGetEpicNote(t *testing.T) {
 	}
 
 	want := &Note{
-		ID:           3,
-		Body:         "foo bar",
-		Attachment:   "",
-		Title:        "",
-		FileName:     "",
-		System:       false,
-		NoteableID:   4392,
-		NoteableType: "Epic",
+		ID:          3,
+		Body:        "foo bar",
+		Attachment:  "",
+		Title:       "",
+		FileName:    "",
+		System:      false,
+		notableID:   4392,
+		notableType: "Epic",
 	}
 
 	if !reflect.DeepEqual(note, want) {
@@ -59,7 +59,7 @@ func TestGetMergeRequestNote(t *testing.T) {
 
 	mux.HandleFunc("/api/v4/projects/1/merge_requests/4329/notes/3", func(w http.ResponseWriter, r *http.Request) {
 		testMethod(t, r, http.MethodGet)
-		fmt.Fprint(w, `{"id":3,"type":"DiffNote","body":"foo bar","attachment":null,"system":false,"noteable_id":4392,"noteable_type":"Epic","resolvable":false,"noteable_iid":null}`)
+		fmt.Fprint(w, `{"id":3,"type":"DiffNote","body":"foo bar","attachment":null,"system":false,"notable_id":4392,"notable_type":"Epic","resolvable":false,"notable_iid":null}`)
 	})
 
 	note, _, err := client.Notes.GetMergeRequestNote("1", 4329, 3, nil)
@@ -68,12 +68,12 @@ func TestGetMergeRequestNote(t *testing.T) {
 	}
 
 	want := &Note{
-		ID:           3,
-		Type:         DiffNote,
-		Body:         "foo bar",
-		System:       false,
-		NoteableID:   4392,
-		NoteableType: "Epic",
+		ID:          3,
+		Type:        DiffNote,
+		Body:        "foo bar",
+		System:      false,
+		notableID:   4392,
+		notableType: "Epic",
 	}
 
 	if !reflect.DeepEqual(note, want) {

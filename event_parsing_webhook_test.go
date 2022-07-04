@@ -92,8 +92,8 @@ func TestParseCommitCommentHook(t *testing.T) {
 		t.Errorf("ProjectID is %v, want %v", event.ProjectID, 5)
 	}
 
-	if event.ObjectAttributes.NoteableType != "Commit" {
-		t.Errorf("NoteableType is %v, want %v", event.ObjectAttributes.NoteableType, "Commit")
+	if event.ObjectAttributes.notableType != "Commit" {
+		t.Errorf("notableType is %v, want %v", event.ObjectAttributes.notableType, "Commit")
 	}
 
 	if event.Commit.ID != "cfe32cf61b73a0d5e9f13e774abde7ff789b1660" {
@@ -134,8 +134,8 @@ func TestParseIssueCommentHook(t *testing.T) {
 		t.Errorf("ProjectID is %v, want %v", event.ProjectID, 5)
 	}
 
-	if event.ObjectAttributes.NoteableType != "Issue" {
-		t.Errorf("NoteableType is %v, want %v", event.ObjectAttributes.NoteableType, "Issue")
+	if event.ObjectAttributes.notableType != "Issue" {
+		t.Errorf("notableType is %v, want %v", event.ObjectAttributes.notableType, "Issue")
 	}
 
 	if event.Issue.Title != "test_issue" {
@@ -204,8 +204,8 @@ func TestParseMergeRequestCommentHook(t *testing.T) {
 		t.Errorf("ProjectID is %v, want %v", event.ProjectID, 5)
 	}
 
-	if event.ObjectAttributes.NoteableType != "MergeRequest" {
-		t.Errorf("NoteableType is %v, want %v", event.ObjectAttributes.NoteableType, "MergeRequest")
+	if event.ObjectAttributes.notableType != "MergeRequest" {
+		t.Errorf("notableType is %v, want %v", event.ObjectAttributes.notableType, "MergeRequest")
 	}
 
 	if event.MergeRequest.ID != 7 {
@@ -387,8 +387,8 @@ func TestParseSnippetCommentHook(t *testing.T) {
 		t.Errorf("ProjectID is %v, want %v", event.ProjectID, 5)
 	}
 
-	if event.ObjectAttributes.NoteableType != "Snippet" {
-		t.Errorf("NoteableType is %v, want %v", event.ObjectAttributes.NoteableType, "Snippet")
+	if event.ObjectAttributes.notableType != "Snippet" {
+		t.Errorf("notableType is %v, want %v", event.ObjectAttributes.notableType, "Snippet")
 	}
 
 	if event.Snippet.Title != "test" {

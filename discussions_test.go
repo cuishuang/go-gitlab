@@ -34,9 +34,9 @@ func TestDiscussionsService_ListIssueDiscussions(t *testing.T) {
 					  "web_url": "http://localhost:3000/venky333"
 					},
 					"system": false,
-					"noteable_id": 3,
-					"noteable_type": "Issue",
-					"noteable_iid": null
+					"notable_id": 3,
+					"notable_type": "Issue",
+					"notable_iid": null
 				  }
 				]
 			  }
@@ -71,16 +71,16 @@ func TestDiscussionsService_ListIssueDiscussions(t *testing.T) {
 				AvatarURL: "https://www.gravatar.com/avatar/00afb8fb6ab07c3ee3e9c1f38777e2f4?s=80&d=identicon",
 				WebURL:    "http://localhost:3000/venky333",
 			},
-			System:       false,
-			ExpiresAt:    nil,
-			UpdatedAt:    nil,
-			CreatedAt:    nil,
-			NoteableID:   3,
-			NoteableType: "Issue",
-			CommitID:     "",
-			Position:     nil,
-			Resolvable:   false,
-			Resolved:     false,
+			System:      false,
+			ExpiresAt:   nil,
+			UpdatedAt:   nil,
+			CreatedAt:   nil,
+			notableID:   3,
+			notableType: "Issue",
+			CommitID:    "",
+			Position:    nil,
+			Resolvable:  false,
+			Resolved:    false,
 			ResolvedBy: struct {
 				ID        int    `json:"id"`
 				Username  string `json:"username"`
@@ -90,7 +90,7 @@ func TestDiscussionsService_ListIssueDiscussions(t *testing.T) {
 				AvatarURL string `json:"avatar_url"`
 				WebURL    string `json:"web_url"`
 			}{},
-			NoteableIID: 0,
+			notableIID: 0,
 		}},
 	}}
 
@@ -140,9 +140,9 @@ func TestDiscussionsService_GetIssueDiscussion(t *testing.T) {
 				  "web_url": "http://localhost:3000/venky333"
 				},
 				"system": false,
-				"noteable_id": 3,
-				"noteable_type": "Issue",
-				"noteable_iid": null
+				"notable_id": 3,
+				"notable_type": "Issue",
+				"notable_iid": null
 			  }
 			]
 		  }
@@ -176,16 +176,16 @@ func TestDiscussionsService_GetIssueDiscussion(t *testing.T) {
 				AvatarURL: "https://www.gravatar.com/avatar/00afb8fb6ab07c3ee3e9c1f38777e2f4?s=80&d=identicon",
 				WebURL:    "http://localhost:3000/venky333",
 			},
-			System:       false,
-			ExpiresAt:    nil,
-			UpdatedAt:    nil,
-			CreatedAt:    nil,
-			NoteableID:   3,
-			NoteableType: "Issue",
-			CommitID:     "",
-			Position:     nil,
-			Resolvable:   false,
-			Resolved:     false,
+			System:      false,
+			ExpiresAt:   nil,
+			UpdatedAt:   nil,
+			CreatedAt:   nil,
+			notableID:   3,
+			notableType: "Issue",
+			CommitID:    "",
+			Position:    nil,
+			Resolvable:  false,
+			Resolved:    false,
 			ResolvedBy: struct {
 				ID        int    `json:"id"`
 				Username  string `json:"username"`
@@ -195,7 +195,7 @@ func TestDiscussionsService_GetIssueDiscussion(t *testing.T) {
 				AvatarURL string `json:"avatar_url"`
 				WebURL    string `json:"web_url"`
 			}{},
-			NoteableIID: 0,
+			notableIID: 0,
 		}},
 	}
 
@@ -245,9 +245,9 @@ func TestDiscussionsService_CreateIssueDiscussion(t *testing.T) {
 				  "web_url": "http://localhost:3000/venky333"
 				},
 				"system": false,
-				"noteable_id": 3,
-				"noteable_type": "Issue",
-				"noteable_iid": null
+				"notable_id": 3,
+				"notable_type": "Issue",
+				"notable_iid": null
 			  }
 			]
 		  }
@@ -281,16 +281,16 @@ func TestDiscussionsService_CreateIssueDiscussion(t *testing.T) {
 				AvatarURL: "https://www.gravatar.com/avatar/00afb8fb6ab07c3ee3e9c1f38777e2f4?s=80&d=identicon",
 				WebURL:    "http://localhost:3000/venky333",
 			},
-			System:       false,
-			ExpiresAt:    nil,
-			UpdatedAt:    nil,
-			CreatedAt:    nil,
-			NoteableID:   3,
-			NoteableType: "Issue",
-			CommitID:     "",
-			Position:     nil,
-			Resolvable:   false,
-			Resolved:     false,
+			System:      false,
+			ExpiresAt:   nil,
+			UpdatedAt:   nil,
+			CreatedAt:   nil,
+			notableID:   3,
+			notableType: "Issue",
+			CommitID:    "",
+			Position:    nil,
+			Resolvable:  false,
+			Resolved:    false,
 			ResolvedBy: struct {
 				ID        int    `json:"id"`
 				Username  string `json:"username"`
@@ -300,7 +300,7 @@ func TestDiscussionsService_CreateIssueDiscussion(t *testing.T) {
 				AvatarURL string `json:"avatar_url"`
 				WebURL    string `json:"web_url"`
 			}{},
-			NoteableIID: 0,
+			notableIID: 0,
 		}},
 	}
 
@@ -344,9 +344,9 @@ func TestDiscussionsService_AddIssueDiscussionNote(t *testing.T) {
 			  "state": "active"
 			},
 			"system": true,
-			"noteable_id": 377,
-			"noteable_type": "Issue",
-			"noteable_iid": 377,
+			"notable_id": 377,
+			"notable_type": "Issue",
+			"notable_iid": 377,
 			"resolvable": false,
 			"confidential": false
 		  }
@@ -377,16 +377,16 @@ func TestDiscussionsService_AddIssueDiscussionNote(t *testing.T) {
 			AvatarURL: "",
 			WebURL:    "",
 		},
-		System:       true,
-		ExpiresAt:    nil,
-		UpdatedAt:    nil,
-		CreatedAt:    nil,
-		NoteableID:   377,
-		NoteableType: "Issue",
-		CommitID:     "",
-		Position:     nil,
-		Resolvable:   false,
-		Resolved:     false,
+		System:      true,
+		ExpiresAt:   nil,
+		UpdatedAt:   nil,
+		CreatedAt:   nil,
+		notableID:   377,
+		notableType: "Issue",
+		CommitID:    "",
+		Position:    nil,
+		Resolvable:  false,
+		Resolved:    false,
 		ResolvedBy: struct {
 			ID        int    `json:"id"`
 			Username  string `json:"username"`
@@ -396,7 +396,7 @@ func TestDiscussionsService_AddIssueDiscussionNote(t *testing.T) {
 			AvatarURL string `json:"avatar_url"`
 			WebURL    string `json:"web_url"`
 		}{},
-		NoteableIID: 377,
+		notableIID: 377,
 	}
 
 	n, resp, err := client.Discussions.AddIssueDiscussionNote(5, 11, "6a9c1750b37d513a43987b574953fceb50b03ce7", nil, nil)
@@ -439,9 +439,9 @@ func TestDiscussionsService_UpdateIssueDiscussionNote(t *testing.T) {
 			  "state": "active"
 			},
 			"system": true,
-			"noteable_id": 377,
-			"noteable_type": "Issue",
-			"noteable_iid": 377,
+			"notable_id": 377,
+			"notable_type": "Issue",
+			"notable_iid": 377,
 			"resolvable": false,
 			"confidential": false
 		  }
@@ -472,16 +472,16 @@ func TestDiscussionsService_UpdateIssueDiscussionNote(t *testing.T) {
 			AvatarURL: "",
 			WebURL:    "",
 		},
-		System:       true,
-		ExpiresAt:    nil,
-		UpdatedAt:    nil,
-		CreatedAt:    nil,
-		NoteableID:   377,
-		NoteableType: "Issue",
-		CommitID:     "",
-		Position:     nil,
-		Resolvable:   false,
-		Resolved:     false,
+		System:      true,
+		ExpiresAt:   nil,
+		UpdatedAt:   nil,
+		CreatedAt:   nil,
+		notableID:   377,
+		notableType: "Issue",
+		CommitID:    "",
+		Position:    nil,
+		Resolvable:  false,
+		Resolved:    false,
 		ResolvedBy: struct {
 			ID        int    `json:"id"`
 			Username  string `json:"username"`
@@ -491,7 +491,7 @@ func TestDiscussionsService_UpdateIssueDiscussionNote(t *testing.T) {
 			AvatarURL string `json:"avatar_url"`
 			WebURL    string `json:"web_url"`
 		}{},
-		NoteableIID: 377,
+		notableIID: 377,
 	}
 
 	n, resp, err := client.Discussions.UpdateIssueDiscussionNote(5, 11, "6a9c1750b37d513a43987b574953fceb50b03ce7", 302, nil, nil)
@@ -566,9 +566,9 @@ func TestDiscussionsService_ListSnippetDiscussions(t *testing.T) {
 					  "web_url": "http://localhost:3000/venky333"
 					},
 					"system": false,
-					"noteable_id": 3,
-					"noteable_type": "Snippet",
-					"noteable_iid": null
+					"notable_id": 3,
+					"notable_type": "Snippet",
+					"notable_iid": null
 				  }
 				]
 			  }
@@ -603,16 +603,16 @@ func TestDiscussionsService_ListSnippetDiscussions(t *testing.T) {
 				AvatarURL: "https://www.gravatar.com/avatar/00afb8fb6ab07c3ee3e9c1f38777e2f4?s=80&d=identicon",
 				WebURL:    "http://localhost:3000/venky333",
 			},
-			System:       false,
-			ExpiresAt:    nil,
-			UpdatedAt:    nil,
-			CreatedAt:    nil,
-			NoteableID:   3,
-			NoteableType: "Snippet",
-			CommitID:     "",
-			Position:     nil,
-			Resolvable:   false,
-			Resolved:     false,
+			System:      false,
+			ExpiresAt:   nil,
+			UpdatedAt:   nil,
+			CreatedAt:   nil,
+			notableID:   3,
+			notableType: "Snippet",
+			CommitID:    "",
+			Position:    nil,
+			Resolvable:  false,
+			Resolved:    false,
 			ResolvedBy: struct {
 				ID        int    `json:"id"`
 				Username  string `json:"username"`
@@ -622,7 +622,7 @@ func TestDiscussionsService_ListSnippetDiscussions(t *testing.T) {
 				AvatarURL string `json:"avatar_url"`
 				WebURL    string `json:"web_url"`
 			}{},
-			NoteableIID: 0,
+			notableIID: 0,
 		}},
 	}}
 
@@ -672,9 +672,9 @@ func TestDiscussionsService_GetSnippetDiscussion(t *testing.T) {
 				  "web_url": "http://localhost:3000/venky333"
 				},
 				"system": false,
-				"noteable_id": 3,
-				"noteable_type": "Snippet",
-				"noteable_iid": null
+				"notable_id": 3,
+				"notable_type": "Snippet",
+				"notable_iid": null
 			  }
 			]
 		  }
@@ -708,16 +708,16 @@ func TestDiscussionsService_GetSnippetDiscussion(t *testing.T) {
 				AvatarURL: "https://www.gravatar.com/avatar/00afb8fb6ab07c3ee3e9c1f38777e2f4?s=80&d=identicon",
 				WebURL:    "http://localhost:3000/venky333",
 			},
-			System:       false,
-			ExpiresAt:    nil,
-			UpdatedAt:    nil,
-			CreatedAt:    nil,
-			NoteableID:   3,
-			NoteableType: "Snippet",
-			CommitID:     "",
-			Position:     nil,
-			Resolvable:   false,
-			Resolved:     false,
+			System:      false,
+			ExpiresAt:   nil,
+			UpdatedAt:   nil,
+			CreatedAt:   nil,
+			notableID:   3,
+			notableType: "Snippet",
+			CommitID:    "",
+			Position:    nil,
+			Resolvable:  false,
+			Resolved:    false,
 			ResolvedBy: struct {
 				ID        int    `json:"id"`
 				Username  string `json:"username"`
@@ -727,7 +727,7 @@ func TestDiscussionsService_GetSnippetDiscussion(t *testing.T) {
 				AvatarURL string `json:"avatar_url"`
 				WebURL    string `json:"web_url"`
 			}{},
-			NoteableIID: 0,
+			notableIID: 0,
 		}},
 	}
 
@@ -777,9 +777,9 @@ func TestDiscussionsService_CreateSnippetDiscussion(t *testing.T) {
 				  "web_url": "http://localhost:3000/venky333"
 				},
 				"system": false,
-				"noteable_id": 3,
-				"noteable_type": "Snippet",
-				"noteable_iid": null
+				"notable_id": 3,
+				"notable_type": "Snippet",
+				"notable_iid": null
 			  }
 			]
 		  }
@@ -813,16 +813,16 @@ func TestDiscussionsService_CreateSnippetDiscussion(t *testing.T) {
 				AvatarURL: "https://www.gravatar.com/avatar/00afb8fb6ab07c3ee3e9c1f38777e2f4?s=80&d=identicon",
 				WebURL:    "http://localhost:3000/venky333",
 			},
-			System:       false,
-			ExpiresAt:    nil,
-			UpdatedAt:    nil,
-			CreatedAt:    nil,
-			NoteableID:   3,
-			NoteableType: "Snippet",
-			CommitID:     "",
-			Position:     nil,
-			Resolvable:   false,
-			Resolved:     false,
+			System:      false,
+			ExpiresAt:   nil,
+			UpdatedAt:   nil,
+			CreatedAt:   nil,
+			notableID:   3,
+			notableType: "Snippet",
+			CommitID:    "",
+			Position:    nil,
+			Resolvable:  false,
+			Resolved:    false,
 			ResolvedBy: struct {
 				ID        int    `json:"id"`
 				Username  string `json:"username"`
@@ -832,7 +832,7 @@ func TestDiscussionsService_CreateSnippetDiscussion(t *testing.T) {
 				AvatarURL string `json:"avatar_url"`
 				WebURL    string `json:"web_url"`
 			}{},
-			NoteableIID: 0,
+			notableIID: 0,
 		}},
 	}
 
@@ -876,9 +876,9 @@ func TestDiscussionsService_AddSnippetDiscussionNote(t *testing.T) {
 			  "state": "active"
 			},
 			"system": true,
-			"noteable_id": 377,
-			"noteable_type": "Snippet",
-			"noteable_iid": 377,
+			"notable_id": 377,
+			"notable_type": "Snippet",
+			"notable_iid": 377,
 			"resolvable": false,
 			"confidential": false
 		  }
@@ -909,16 +909,16 @@ func TestDiscussionsService_AddSnippetDiscussionNote(t *testing.T) {
 			AvatarURL: "",
 			WebURL:    "",
 		},
-		System:       true,
-		ExpiresAt:    nil,
-		UpdatedAt:    nil,
-		CreatedAt:    nil,
-		NoteableID:   377,
-		NoteableType: "Snippet",
-		CommitID:     "",
-		Position:     nil,
-		Resolvable:   false,
-		Resolved:     false,
+		System:      true,
+		ExpiresAt:   nil,
+		UpdatedAt:   nil,
+		CreatedAt:   nil,
+		notableID:   377,
+		notableType: "Snippet",
+		CommitID:    "",
+		Position:    nil,
+		Resolvable:  false,
+		Resolved:    false,
 		ResolvedBy: struct {
 			ID        int    `json:"id"`
 			Username  string `json:"username"`
@@ -928,7 +928,7 @@ func TestDiscussionsService_AddSnippetDiscussionNote(t *testing.T) {
 			AvatarURL string `json:"avatar_url"`
 			WebURL    string `json:"web_url"`
 		}{},
-		NoteableIID: 377,
+		notableIID: 377,
 	}
 
 	n, resp, err := client.Discussions.AddSnippetDiscussionNote(5, 11, "6a9c1750b37d513a43987b574953fceb50b03ce7", nil, nil)
@@ -971,9 +971,9 @@ func TestDiscussionsService_UpdateSnippetDiscussionNote(t *testing.T) {
 			  "state": "active"
 			},
 			"system": true,
-			"noteable_id": 377,
-			"noteable_type": "Snippet",
-			"noteable_iid": 377,
+			"notable_id": 377,
+			"notable_type": "Snippet",
+			"notable_iid": 377,
 			"resolvable": false,
 			"confidential": false
 		  }
@@ -1004,16 +1004,16 @@ func TestDiscussionsService_UpdateSnippetDiscussionNote(t *testing.T) {
 			AvatarURL: "",
 			WebURL:    "",
 		},
-		System:       true,
-		ExpiresAt:    nil,
-		UpdatedAt:    nil,
-		CreatedAt:    nil,
-		NoteableID:   377,
-		NoteableType: "Snippet",
-		CommitID:     "",
-		Position:     nil,
-		Resolvable:   false,
-		Resolved:     false,
+		System:      true,
+		ExpiresAt:   nil,
+		UpdatedAt:   nil,
+		CreatedAt:   nil,
+		notableID:   377,
+		notableType: "Snippet",
+		CommitID:    "",
+		Position:    nil,
+		Resolvable:  false,
+		Resolved:    false,
 		ResolvedBy: struct {
 			ID        int    `json:"id"`
 			Username  string `json:"username"`
@@ -1023,7 +1023,7 @@ func TestDiscussionsService_UpdateSnippetDiscussionNote(t *testing.T) {
 			AvatarURL string `json:"avatar_url"`
 			WebURL    string `json:"web_url"`
 		}{},
-		NoteableIID: 377,
+		notableIID: 377,
 	}
 
 	n, resp, err := client.Discussions.UpdateSnippetDiscussionNote(5, 11, "6a9c1750b37d513a43987b574953fceb50b03ce7", 302, nil, nil)
@@ -1098,9 +1098,9 @@ func TestDiscussionsService_ListGroupEpicDiscussions(t *testing.T) {
 					  "web_url": "http://localhost:3000/venky333"
 					},
 					"system": false,
-					"noteable_id": 3,
-					"noteable_type": "Epic",
-					"noteable_iid": null
+					"notable_id": 3,
+					"notable_type": "Epic",
+					"notable_iid": null
 				  }
 				]
 			  }
@@ -1135,16 +1135,16 @@ func TestDiscussionsService_ListGroupEpicDiscussions(t *testing.T) {
 				AvatarURL: "https://www.gravatar.com/avatar/00afb8fb6ab07c3ee3e9c1f38777e2f4?s=80&d=identicon",
 				WebURL:    "http://localhost:3000/venky333",
 			},
-			System:       false,
-			ExpiresAt:    nil,
-			UpdatedAt:    nil,
-			CreatedAt:    nil,
-			NoteableID:   3,
-			NoteableType: "Epic",
-			CommitID:     "",
-			Position:     nil,
-			Resolvable:   false,
-			Resolved:     false,
+			System:      false,
+			ExpiresAt:   nil,
+			UpdatedAt:   nil,
+			CreatedAt:   nil,
+			notableID:   3,
+			notableType: "Epic",
+			CommitID:    "",
+			Position:    nil,
+			Resolvable:  false,
+			Resolved:    false,
 			ResolvedBy: struct {
 				ID        int    `json:"id"`
 				Username  string `json:"username"`
@@ -1154,7 +1154,7 @@ func TestDiscussionsService_ListGroupEpicDiscussions(t *testing.T) {
 				AvatarURL string `json:"avatar_url"`
 				WebURL    string `json:"web_url"`
 			}{},
-			NoteableIID: 0,
+			notableIID: 0,
 		}},
 	}}
 
@@ -1204,9 +1204,9 @@ func TestDiscussionsService_GetEpicDiscussion(t *testing.T) {
 				  "web_url": "http://localhost:3000/venky333"
 				},
 				"system": false,
-				"noteable_id": 3,
-				"noteable_type": "Epic",
-				"noteable_iid": null
+				"notable_id": 3,
+				"notable_type": "Epic",
+				"notable_iid": null
 			  }
 			]
 		  }
@@ -1240,16 +1240,16 @@ func TestDiscussionsService_GetEpicDiscussion(t *testing.T) {
 				AvatarURL: "https://www.gravatar.com/avatar/00afb8fb6ab07c3ee3e9c1f38777e2f4?s=80&d=identicon",
 				WebURL:    "http://localhost:3000/venky333",
 			},
-			System:       false,
-			ExpiresAt:    nil,
-			UpdatedAt:    nil,
-			CreatedAt:    nil,
-			NoteableID:   3,
-			NoteableType: "Epic",
-			CommitID:     "",
-			Position:     nil,
-			Resolvable:   false,
-			Resolved:     false,
+			System:      false,
+			ExpiresAt:   nil,
+			UpdatedAt:   nil,
+			CreatedAt:   nil,
+			notableID:   3,
+			notableType: "Epic",
+			CommitID:    "",
+			Position:    nil,
+			Resolvable:  false,
+			Resolved:    false,
 			ResolvedBy: struct {
 				ID        int    `json:"id"`
 				Username  string `json:"username"`
@@ -1259,7 +1259,7 @@ func TestDiscussionsService_GetEpicDiscussion(t *testing.T) {
 				AvatarURL string `json:"avatar_url"`
 				WebURL    string `json:"web_url"`
 			}{},
-			NoteableIID: 0,
+			notableIID: 0,
 		}},
 	}
 
@@ -1309,9 +1309,9 @@ func TestDiscussionsService_CreateEpicDiscussion(t *testing.T) {
 				  "web_url": "http://localhost:3000/venky333"
 				},
 				"system": false,
-				"noteable_id": 3,
-				"noteable_type": "Epic",
-				"noteable_iid": null
+				"notable_id": 3,
+				"notable_type": "Epic",
+				"notable_iid": null
 			  }
 			]
 		  }
@@ -1345,16 +1345,16 @@ func TestDiscussionsService_CreateEpicDiscussion(t *testing.T) {
 				AvatarURL: "https://www.gravatar.com/avatar/00afb8fb6ab07c3ee3e9c1f38777e2f4?s=80&d=identicon",
 				WebURL:    "http://localhost:3000/venky333",
 			},
-			System:       false,
-			ExpiresAt:    nil,
-			UpdatedAt:    nil,
-			CreatedAt:    nil,
-			NoteableID:   3,
-			NoteableType: "Epic",
-			CommitID:     "",
-			Position:     nil,
-			Resolvable:   false,
-			Resolved:     false,
+			System:      false,
+			ExpiresAt:   nil,
+			UpdatedAt:   nil,
+			CreatedAt:   nil,
+			notableID:   3,
+			notableType: "Epic",
+			CommitID:    "",
+			Position:    nil,
+			Resolvable:  false,
+			Resolved:    false,
 			ResolvedBy: struct {
 				ID        int    `json:"id"`
 				Username  string `json:"username"`
@@ -1364,7 +1364,7 @@ func TestDiscussionsService_CreateEpicDiscussion(t *testing.T) {
 				AvatarURL string `json:"avatar_url"`
 				WebURL    string `json:"web_url"`
 			}{},
-			NoteableIID: 0,
+			notableIID: 0,
 		}},
 	}
 
@@ -1408,9 +1408,9 @@ func TestDiscussionsService_AddEpicDiscussionNote(t *testing.T) {
 			  "state": "active"
 			},
 			"system": true,
-			"noteable_id": 377,
-			"noteable_type": "Epic",
-			"noteable_iid": 377,
+			"notable_id": 377,
+			"notable_type": "Epic",
+			"notable_iid": 377,
 			"resolvable": false,
 			"confidential": false
 		  }
@@ -1441,16 +1441,16 @@ func TestDiscussionsService_AddEpicDiscussionNote(t *testing.T) {
 			AvatarURL: "",
 			WebURL:    "",
 		},
-		System:       true,
-		ExpiresAt:    nil,
-		UpdatedAt:    nil,
-		CreatedAt:    nil,
-		NoteableID:   377,
-		NoteableType: "Epic",
-		CommitID:     "",
-		Position:     nil,
-		Resolvable:   false,
-		Resolved:     false,
+		System:      true,
+		ExpiresAt:   nil,
+		UpdatedAt:   nil,
+		CreatedAt:   nil,
+		notableID:   377,
+		notableType: "Epic",
+		CommitID:    "",
+		Position:    nil,
+		Resolvable:  false,
+		Resolved:    false,
 		ResolvedBy: struct {
 			ID        int    `json:"id"`
 			Username  string `json:"username"`
@@ -1460,7 +1460,7 @@ func TestDiscussionsService_AddEpicDiscussionNote(t *testing.T) {
 			AvatarURL string `json:"avatar_url"`
 			WebURL    string `json:"web_url"`
 		}{},
-		NoteableIID: 377,
+		notableIID: 377,
 	}
 
 	n, resp, err := client.Discussions.AddEpicDiscussionNote(5, 11, "6a9c1750b37d513a43987b574953fceb50b03ce7", nil, nil)
@@ -1503,9 +1503,9 @@ func TestDiscussionsService_UpdateEpicDiscussionNote(t *testing.T) {
 			  "state": "active"
 			},
 			"system": true,
-			"noteable_id": 377,
-			"noteable_type": "Epic",
-			"noteable_iid": 377,
+			"notable_id": 377,
+			"notable_type": "Epic",
+			"notable_iid": 377,
 			"resolvable": false,
 			"confidential": false
 		  }
@@ -1536,16 +1536,16 @@ func TestDiscussionsService_UpdateEpicDiscussionNote(t *testing.T) {
 			AvatarURL: "",
 			WebURL:    "",
 		},
-		System:       true,
-		ExpiresAt:    nil,
-		UpdatedAt:    nil,
-		CreatedAt:    nil,
-		NoteableID:   377,
-		NoteableType: "Epic",
-		CommitID:     "",
-		Position:     nil,
-		Resolvable:   false,
-		Resolved:     false,
+		System:      true,
+		ExpiresAt:   nil,
+		UpdatedAt:   nil,
+		CreatedAt:   nil,
+		notableID:   377,
+		notableType: "Epic",
+		CommitID:    "",
+		Position:    nil,
+		Resolvable:  false,
+		Resolved:    false,
 		ResolvedBy: struct {
 			ID        int    `json:"id"`
 			Username  string `json:"username"`
@@ -1555,7 +1555,7 @@ func TestDiscussionsService_UpdateEpicDiscussionNote(t *testing.T) {
 			AvatarURL string `json:"avatar_url"`
 			WebURL    string `json:"web_url"`
 		}{},
-		NoteableIID: 377,
+		notableIID: 377,
 	}
 
 	n, resp, err := client.Discussions.UpdateEpicDiscussionNote(5, 11, "6a9c1750b37d513a43987b574953fceb50b03ce7", 302, nil, nil)
@@ -1630,9 +1630,9 @@ func TestDiscussionsService_ListMergeRequestDiscussions(t *testing.T) {
 					  "web_url": "http://localhost:3000/venky333"
 					},
 					"system": false,
-					"noteable_id": 3,
-					"noteable_type": "Merge request",
-					"noteable_iid": null
+					"notable_id": 3,
+					"notable_type": "Merge request",
+					"notable_iid": null
 				  }
 				]
 			  }
@@ -1667,16 +1667,16 @@ func TestDiscussionsService_ListMergeRequestDiscussions(t *testing.T) {
 				AvatarURL: "https://www.gravatar.com/avatar/00afb8fb6ab07c3ee3e9c1f38777e2f4?s=80&d=identicon",
 				WebURL:    "http://localhost:3000/venky333",
 			},
-			System:       false,
-			ExpiresAt:    nil,
-			UpdatedAt:    nil,
-			CreatedAt:    nil,
-			NoteableID:   3,
-			NoteableType: "Merge request",
-			CommitID:     "",
-			Position:     nil,
-			Resolvable:   false,
-			Resolved:     false,
+			System:      false,
+			ExpiresAt:   nil,
+			UpdatedAt:   nil,
+			CreatedAt:   nil,
+			notableID:   3,
+			notableType: "Merge request",
+			CommitID:    "",
+			Position:    nil,
+			Resolvable:  false,
+			Resolved:    false,
 			ResolvedBy: struct {
 				ID        int    `json:"id"`
 				Username  string `json:"username"`
@@ -1686,7 +1686,7 @@ func TestDiscussionsService_ListMergeRequestDiscussions(t *testing.T) {
 				AvatarURL string `json:"avatar_url"`
 				WebURL    string `json:"web_url"`
 			}{},
-			NoteableIID: 0,
+			notableIID: 0,
 		}},
 	}}
 
@@ -1736,9 +1736,9 @@ func TestDiscussionsService_GetMergeRequestDiscussion(t *testing.T) {
 				  "web_url": "http://localhost:3000/venky333"
 				},
 				"system": false,
-				"noteable_id": 3,
-				"noteable_type": "Merge request",
-				"noteable_iid": null
+				"notable_id": 3,
+				"notable_type": "Merge request",
+				"notable_iid": null
 			  }
 			]
 		  }
@@ -1772,16 +1772,16 @@ func TestDiscussionsService_GetMergeRequestDiscussion(t *testing.T) {
 				AvatarURL: "https://www.gravatar.com/avatar/00afb8fb6ab07c3ee3e9c1f38777e2f4?s=80&d=identicon",
 				WebURL:    "http://localhost:3000/venky333",
 			},
-			System:       false,
-			ExpiresAt:    nil,
-			UpdatedAt:    nil,
-			CreatedAt:    nil,
-			NoteableID:   3,
-			NoteableType: "Merge request",
-			CommitID:     "",
-			Position:     nil,
-			Resolvable:   false,
-			Resolved:     false,
+			System:      false,
+			ExpiresAt:   nil,
+			UpdatedAt:   nil,
+			CreatedAt:   nil,
+			notableID:   3,
+			notableType: "Merge request",
+			CommitID:    "",
+			Position:    nil,
+			Resolvable:  false,
+			Resolved:    false,
 			ResolvedBy: struct {
 				ID        int    `json:"id"`
 				Username  string `json:"username"`
@@ -1791,7 +1791,7 @@ func TestDiscussionsService_GetMergeRequestDiscussion(t *testing.T) {
 				AvatarURL string `json:"avatar_url"`
 				WebURL    string `json:"web_url"`
 			}{},
-			NoteableIID: 0,
+			notableIID: 0,
 		}},
 	}
 
@@ -1841,9 +1841,9 @@ func TestDiscussionsService_CreateMergeRequestDiscussion(t *testing.T) {
 				  "web_url": "http://localhost:3000/venky333"
 				},
 				"system": false,
-				"noteable_id": 3,
-				"noteable_type": "Merge request",
-				"noteable_iid": null
+				"notable_id": 3,
+				"notable_type": "Merge request",
+				"notable_iid": null
 			  }
 			]
 		  }
@@ -1877,16 +1877,16 @@ func TestDiscussionsService_CreateMergeRequestDiscussion(t *testing.T) {
 				AvatarURL: "https://www.gravatar.com/avatar/00afb8fb6ab07c3ee3e9c1f38777e2f4?s=80&d=identicon",
 				WebURL:    "http://localhost:3000/venky333",
 			},
-			System:       false,
-			ExpiresAt:    nil,
-			UpdatedAt:    nil,
-			CreatedAt:    nil,
-			NoteableID:   3,
-			NoteableType: "Merge request",
-			CommitID:     "",
-			Position:     nil,
-			Resolvable:   false,
-			Resolved:     false,
+			System:      false,
+			ExpiresAt:   nil,
+			UpdatedAt:   nil,
+			CreatedAt:   nil,
+			notableID:   3,
+			notableType: "Merge request",
+			CommitID:    "",
+			Position:    nil,
+			Resolvable:  false,
+			Resolved:    false,
 			ResolvedBy: struct {
 				ID        int    `json:"id"`
 				Username  string `json:"username"`
@@ -1896,7 +1896,7 @@ func TestDiscussionsService_CreateMergeRequestDiscussion(t *testing.T) {
 				AvatarURL string `json:"avatar_url"`
 				WebURL    string `json:"web_url"`
 			}{},
-			NoteableIID: 0,
+			notableIID: 0,
 		}},
 	}
 
@@ -1946,9 +1946,9 @@ func TestDiscussionsService_ResolveMergeRequestDiscussion(t *testing.T) {
 				  "web_url": "http://localhost:3000/venky333"
 				},
 				"system": false,
-				"noteable_id": 3,
-				"noteable_type": "Merge request",
-				"noteable_iid": null
+				"notable_id": 3,
+				"notable_type": "Merge request",
+				"notable_iid": null
 			  }
 			]
 		  }
@@ -1982,16 +1982,16 @@ func TestDiscussionsService_ResolveMergeRequestDiscussion(t *testing.T) {
 				AvatarURL: "https://www.gravatar.com/avatar/00afb8fb6ab07c3ee3e9c1f38777e2f4?s=80&d=identicon",
 				WebURL:    "http://localhost:3000/venky333",
 			},
-			System:       false,
-			ExpiresAt:    nil,
-			UpdatedAt:    nil,
-			CreatedAt:    nil,
-			NoteableID:   3,
-			NoteableType: "Merge request",
-			CommitID:     "",
-			Position:     nil,
-			Resolvable:   false,
-			Resolved:     false,
+			System:      false,
+			ExpiresAt:   nil,
+			UpdatedAt:   nil,
+			CreatedAt:   nil,
+			notableID:   3,
+			notableType: "Merge request",
+			CommitID:    "",
+			Position:    nil,
+			Resolvable:  false,
+			Resolved:    false,
 			ResolvedBy: struct {
 				ID        int    `json:"id"`
 				Username  string `json:"username"`
@@ -2001,7 +2001,7 @@ func TestDiscussionsService_ResolveMergeRequestDiscussion(t *testing.T) {
 				AvatarURL string `json:"avatar_url"`
 				WebURL    string `json:"web_url"`
 			}{},
-			NoteableIID: 0,
+			notableIID: 0,
 		}},
 	}
 
@@ -2045,9 +2045,9 @@ func TestDiscussionsService_AddMergeRequestDiscussionNote(t *testing.T) {
 			  "state": "active"
 			},
 			"system": true,
-			"noteable_id": 377,
-			"noteable_type": "Merge request",
-			"noteable_iid": 377,
+			"notable_id": 377,
+			"notable_type": "Merge request",
+			"notable_iid": 377,
 			"resolvable": false,
 			"confidential": false
 		  }
@@ -2078,16 +2078,16 @@ func TestDiscussionsService_AddMergeRequestDiscussionNote(t *testing.T) {
 			AvatarURL: "",
 			WebURL:    "",
 		},
-		System:       true,
-		ExpiresAt:    nil,
-		UpdatedAt:    nil,
-		CreatedAt:    nil,
-		NoteableID:   377,
-		NoteableType: "Merge request",
-		CommitID:     "",
-		Position:     nil,
-		Resolvable:   false,
-		Resolved:     false,
+		System:      true,
+		ExpiresAt:   nil,
+		UpdatedAt:   nil,
+		CreatedAt:   nil,
+		notableID:   377,
+		notableType: "Merge request",
+		CommitID:    "",
+		Position:    nil,
+		Resolvable:  false,
+		Resolved:    false,
 		ResolvedBy: struct {
 			ID        int    `json:"id"`
 			Username  string `json:"username"`
@@ -2097,7 +2097,7 @@ func TestDiscussionsService_AddMergeRequestDiscussionNote(t *testing.T) {
 			AvatarURL string `json:"avatar_url"`
 			WebURL    string `json:"web_url"`
 		}{},
-		NoteableIID: 377,
+		notableIID: 377,
 	}
 
 	n, resp, err := client.Discussions.AddMergeRequestDiscussionNote(5, 11, "6a9c1750b37d513a43987b574953fceb50b03ce7", nil, nil)
@@ -2140,9 +2140,9 @@ func TestDiscussionsService_UpdateMergeRequestDiscussionNote(t *testing.T) {
 			  "state": "active"
 			},
 			"system": true,
-			"noteable_id": 377,
-			"noteable_type": "Merge request",
-			"noteable_iid": 377,
+			"notable_id": 377,
+			"notable_type": "Merge request",
+			"notable_iid": 377,
 			"resolvable": false,
 			"confidential": false
 		  }
@@ -2173,16 +2173,16 @@ func TestDiscussionsService_UpdateMergeRequestDiscussionNote(t *testing.T) {
 			AvatarURL: "",
 			WebURL:    "",
 		},
-		System:       true,
-		ExpiresAt:    nil,
-		UpdatedAt:    nil,
-		CreatedAt:    nil,
-		NoteableID:   377,
-		NoteableType: "Merge request",
-		CommitID:     "",
-		Position:     nil,
-		Resolvable:   false,
-		Resolved:     false,
+		System:      true,
+		ExpiresAt:   nil,
+		UpdatedAt:   nil,
+		CreatedAt:   nil,
+		notableID:   377,
+		notableType: "Merge request",
+		CommitID:    "",
+		Position:    nil,
+		Resolvable:  false,
+		Resolved:    false,
 		ResolvedBy: struct {
 			ID        int    `json:"id"`
 			Username  string `json:"username"`
@@ -2192,7 +2192,7 @@ func TestDiscussionsService_UpdateMergeRequestDiscussionNote(t *testing.T) {
 			AvatarURL string `json:"avatar_url"`
 			WebURL    string `json:"web_url"`
 		}{},
-		NoteableIID: 377,
+		notableIID: 377,
 	}
 
 	n, resp, err := client.Discussions.UpdateMergeRequestDiscussionNote(5, 11, "6a9c1750b37d513a43987b574953fceb50b03ce7", 302, nil, nil)
@@ -2267,9 +2267,9 @@ func TestDiscussionsService_ListCommitDiscussions(t *testing.T) {
 					  "web_url": "http://localhost:3000/venky333"
 					},
 					"system": false,
-					"noteable_id": 3,
-					"noteable_type": "Commit",
-					"noteable_iid": null
+					"notable_id": 3,
+					"notable_type": "Commit",
+					"notable_iid": null
 				  }
 				]
 			  }
@@ -2304,16 +2304,16 @@ func TestDiscussionsService_ListCommitDiscussions(t *testing.T) {
 				AvatarURL: "https://www.gravatar.com/avatar/00afb8fb6ab07c3ee3e9c1f38777e2f4?s=80&d=identicon",
 				WebURL:    "http://localhost:3000/venky333",
 			},
-			System:       false,
-			ExpiresAt:    nil,
-			UpdatedAt:    nil,
-			CreatedAt:    nil,
-			NoteableID:   3,
-			NoteableType: "Commit",
-			CommitID:     "",
-			Position:     nil,
-			Resolvable:   false,
-			Resolved:     false,
+			System:      false,
+			ExpiresAt:   nil,
+			UpdatedAt:   nil,
+			CreatedAt:   nil,
+			notableID:   3,
+			notableType: "Commit",
+			CommitID:    "",
+			Position:    nil,
+			Resolvable:  false,
+			Resolved:    false,
 			ResolvedBy: struct {
 				ID        int    `json:"id"`
 				Username  string `json:"username"`
@@ -2323,7 +2323,7 @@ func TestDiscussionsService_ListCommitDiscussions(t *testing.T) {
 				AvatarURL string `json:"avatar_url"`
 				WebURL    string `json:"web_url"`
 			}{},
-			NoteableIID: 0,
+			notableIID: 0,
 		}},
 	}}
 
@@ -2373,9 +2373,9 @@ func TestDiscussionsService_GetCommitDiscussion(t *testing.T) {
 				  "web_url": "http://localhost:3000/venky333"
 				},
 				"system": false,
-				"noteable_id": 3,
-				"noteable_type": "Commit",
-				"noteable_iid": null
+				"notable_id": 3,
+				"notable_type": "Commit",
+				"notable_iid": null
 			  }
 			]
 		  }
@@ -2409,16 +2409,16 @@ func TestDiscussionsService_GetCommitDiscussion(t *testing.T) {
 				AvatarURL: "https://www.gravatar.com/avatar/00afb8fb6ab07c3ee3e9c1f38777e2f4?s=80&d=identicon",
 				WebURL:    "http://localhost:3000/venky333",
 			},
-			System:       false,
-			ExpiresAt:    nil,
-			UpdatedAt:    nil,
-			CreatedAt:    nil,
-			NoteableID:   3,
-			NoteableType: "Commit",
-			CommitID:     "",
-			Position:     nil,
-			Resolvable:   false,
-			Resolved:     false,
+			System:      false,
+			ExpiresAt:   nil,
+			UpdatedAt:   nil,
+			CreatedAt:   nil,
+			notableID:   3,
+			notableType: "Commit",
+			CommitID:    "",
+			Position:    nil,
+			Resolvable:  false,
+			Resolved:    false,
 			ResolvedBy: struct {
 				ID        int    `json:"id"`
 				Username  string `json:"username"`
@@ -2428,7 +2428,7 @@ func TestDiscussionsService_GetCommitDiscussion(t *testing.T) {
 				AvatarURL string `json:"avatar_url"`
 				WebURL    string `json:"web_url"`
 			}{},
-			NoteableIID: 0,
+			notableIID: 0,
 		}},
 	}
 
@@ -2478,9 +2478,9 @@ func TestDiscussionsService_CreateCommitDiscussion(t *testing.T) {
 				  "web_url": "http://localhost:3000/venky333"
 				},
 				"system": false,
-				"noteable_id": 3,
-				"noteable_type": "Commit",
-				"noteable_iid": null
+				"notable_id": 3,
+				"notable_type": "Commit",
+				"notable_iid": null
 			  }
 			]
 		  }
@@ -2514,16 +2514,16 @@ func TestDiscussionsService_CreateCommitDiscussion(t *testing.T) {
 				AvatarURL: "https://www.gravatar.com/avatar/00afb8fb6ab07c3ee3e9c1f38777e2f4?s=80&d=identicon",
 				WebURL:    "http://localhost:3000/venky333",
 			},
-			System:       false,
-			ExpiresAt:    nil,
-			UpdatedAt:    nil,
-			CreatedAt:    nil,
-			NoteableID:   3,
-			NoteableType: "Commit",
-			CommitID:     "",
-			Position:     nil,
-			Resolvable:   false,
-			Resolved:     false,
+			System:      false,
+			ExpiresAt:   nil,
+			UpdatedAt:   nil,
+			CreatedAt:   nil,
+			notableID:   3,
+			notableType: "Commit",
+			CommitID:    "",
+			Position:    nil,
+			Resolvable:  false,
+			Resolved:    false,
 			ResolvedBy: struct {
 				ID        int    `json:"id"`
 				Username  string `json:"username"`
@@ -2533,7 +2533,7 @@ func TestDiscussionsService_CreateCommitDiscussion(t *testing.T) {
 				AvatarURL string `json:"avatar_url"`
 				WebURL    string `json:"web_url"`
 			}{},
-			NoteableIID: 0,
+			notableIID: 0,
 		}},
 	}
 
@@ -2577,9 +2577,9 @@ func TestDiscussionsService_AddCommitDiscussionNote(t *testing.T) {
 			  "state": "active"
 			},
 			"system": true,
-			"noteable_id": 377,
-			"noteable_type": "Commit",
-			"noteable_iid": 377,
+			"notable_id": 377,
+			"notable_type": "Commit",
+			"notable_iid": 377,
 			"resolvable": false,
 			"confidential": false
 		  }
@@ -2610,16 +2610,16 @@ func TestDiscussionsService_AddCommitDiscussionNote(t *testing.T) {
 			AvatarURL: "",
 			WebURL:    "",
 		},
-		System:       true,
-		ExpiresAt:    nil,
-		UpdatedAt:    nil,
-		CreatedAt:    nil,
-		NoteableID:   377,
-		NoteableType: "Commit",
-		CommitID:     "",
-		Position:     nil,
-		Resolvable:   false,
-		Resolved:     false,
+		System:      true,
+		ExpiresAt:   nil,
+		UpdatedAt:   nil,
+		CreatedAt:   nil,
+		notableID:   377,
+		notableType: "Commit",
+		CommitID:    "",
+		Position:    nil,
+		Resolvable:  false,
+		Resolved:    false,
 		ResolvedBy: struct {
 			ID        int    `json:"id"`
 			Username  string `json:"username"`
@@ -2629,7 +2629,7 @@ func TestDiscussionsService_AddCommitDiscussionNote(t *testing.T) {
 			AvatarURL string `json:"avatar_url"`
 			WebURL    string `json:"web_url"`
 		}{},
-		NoteableIID: 377,
+		notableIID: 377,
 	}
 
 	n, resp, err := client.Discussions.AddCommitDiscussionNote(5, 11, "6a9c1750b37d513a43987b574953fceb50b03ce7", nil, nil)
@@ -2672,9 +2672,9 @@ func TestDiscussionsService_UpdateCommitDiscussionNote(t *testing.T) {
 			  "state": "active"
 			},
 			"system": true,
-			"noteable_id": 377,
-			"noteable_type": "Commit",
-			"noteable_iid": 377,
+			"notable_id": 377,
+			"notable_type": "Commit",
+			"notable_iid": 377,
 			"resolvable": false,
 			"confidential": false
 		  }
@@ -2705,16 +2705,16 @@ func TestDiscussionsService_UpdateCommitDiscussionNote(t *testing.T) {
 			AvatarURL: "",
 			WebURL:    "",
 		},
-		System:       true,
-		ExpiresAt:    nil,
-		UpdatedAt:    nil,
-		CreatedAt:    nil,
-		NoteableID:   377,
-		NoteableType: "Commit",
-		CommitID:     "",
-		Position:     nil,
-		Resolvable:   false,
-		Resolved:     false,
+		System:      true,
+		ExpiresAt:   nil,
+		UpdatedAt:   nil,
+		CreatedAt:   nil,
+		notableID:   377,
+		notableType: "Commit",
+		CommitID:    "",
+		Position:    nil,
+		Resolvable:  false,
+		Resolved:    false,
 		ResolvedBy: struct {
 			ID        int    `json:"id"`
 			Username  string `json:"username"`
@@ -2724,7 +2724,7 @@ func TestDiscussionsService_UpdateCommitDiscussionNote(t *testing.T) {
 			AvatarURL string `json:"avatar_url"`
 			WebURL    string `json:"web_url"`
 		}{},
-		NoteableIID: 377,
+		notableIID: 377,
 	}
 
 	n, resp, err := client.Discussions.UpdateCommitDiscussionNote(5, 11, "6a9c1750b37d513a43987b574953fceb50b03ce7", 302, nil, nil)

@@ -18,7 +18,7 @@ linters-settings:
   misspell:
     locale: US
     ignore-words:
-    - noteable
+    - notable
   unused:
     # Treat code as a program (not a library) and report unused exported identifiers
     check-exported: false

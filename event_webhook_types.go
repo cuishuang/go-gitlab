@@ -85,19 +85,19 @@ type CommitCommentEvent struct {
 	} `json:"project"`
 	Repository       *Repository `json:"repository"`
 	ObjectAttributes struct {
-		ID           int    `json:"id"`
-		Note         string `json:"note"`
-		NoteableType string `json:"noteable_type"`
-		AuthorID     int    `json:"author_id"`
-		CreatedAt    string `json:"created_at"`
-		UpdatedAt    string `json:"updated_at"`
-		ProjectID    int    `json:"project_id"`
-		Attachment   string `json:"attachment"`
-		LineCode     string `json:"line_code"`
-		CommitID     string `json:"commit_id"`
-		NoteableID   int    `json:"noteable_id"`
-		System       bool   `json:"system"`
-		StDiff       struct {
+		ID          int    `json:"id"`
+		Note        string `json:"note"`
+		notableType string `json:"notable_type"`
+		AuthorID    int    `json:"author_id"`
+		CreatedAt   string `json:"created_at"`
+		UpdatedAt   string `json:"updated_at"`
+		ProjectID   int    `json:"project_id"`
+		Attachment  string `json:"attachment"`
+		LineCode    string `json:"line_code"`
+		CommitID    string `json:"commit_id"`
+		notableID   int    `json:"notable_id"`
+		System      bool   `json:"system"`
+		StDiff      struct {
 			Diff        string `json:"diff"`
 			NewPath     string `json:"new_path"`
 			OldPath     string `json:"old_path"`
@@ -184,21 +184,21 @@ type IssueCommentEvent struct {
 	} `json:"project"`
 	Repository       *Repository `json:"repository"`
 	ObjectAttributes struct {
-		ID           int     `json:"id"`
-		Note         string  `json:"note"`
-		NoteableType string  `json:"noteable_type"`
-		AuthorID     int     `json:"author_id"`
-		CreatedAt    string  `json:"created_at"`
-		UpdatedAt    string  `json:"updated_at"`
-		ProjectID    int     `json:"project_id"`
-		Attachment   string  `json:"attachment"`
-		LineCode     string  `json:"line_code"`
-		CommitID     string  `json:"commit_id"`
-		NoteableID   int     `json:"noteable_id"`
-		System       bool    `json:"system"`
-		StDiff       []*Diff `json:"st_diff"`
-		Description  string  `json:"description"`
-		URL          string  `json:"url"`
+		ID          int     `json:"id"`
+		Note        string  `json:"note"`
+		notableType string  `json:"notable_type"`
+		AuthorID    int     `json:"author_id"`
+		CreatedAt   string  `json:"created_at"`
+		UpdatedAt   string  `json:"updated_at"`
+		ProjectID   int     `json:"project_id"`
+		Attachment  string  `json:"attachment"`
+		LineCode    string  `json:"line_code"`
+		CommitID    string  `json:"commit_id"`
+		notableID   int     `json:"notable_id"`
+		System      bool    `json:"system"`
+		StDiff      []*Diff `json:"st_diff"`
+		Description string  `json:"description"`
+		URL         string  `json:"url"`
 	} `json:"object_attributes"`
 	Issue struct {
 		ID                  int      `json:"id"`
@@ -380,8 +380,8 @@ type MergeCommentEvent struct {
 		ID               int           `json:"id"`
 		LineCode         string        `json:"line_code"`
 		Note             string        `json:"note"`
-		NoteableID       int           `json:"noteable_id"`
-		NoteableType     string        `json:"noteable_type"`
+		notableID        int           `json:"notable_id"`
+		notableType      string        `json:"notable_type"`
 		OriginalPosition *NotePosition `json:"original_position"`
 		Position         *NotePosition `json:"position"`
 		ProjectID        int           `json:"project_id"`
@@ -858,21 +858,21 @@ type SnippetCommentEvent struct {
 	} `json:"project"`
 	Repository       *Repository `json:"repository"`
 	ObjectAttributes struct {
-		ID           int    `json:"id"`
-		Note         string `json:"note"`
-		NoteableType string `json:"noteable_type"`
-		AuthorID     int    `json:"author_id"`
-		CreatedAt    string `json:"created_at"`
-		UpdatedAt    string `json:"updated_at"`
-		ProjectID    int    `json:"project_id"`
-		Attachment   string `json:"attachment"`
-		LineCode     string `json:"line_code"`
-		CommitID     string `json:"commit_id"`
-		NoteableID   int    `json:"noteable_id"`
-		System       bool   `json:"system"`
-		StDiff       *Diff  `json:"st_diff"`
-		Description  string `json:"description"`
-		URL          string `json:"url"`
+		ID          int    `json:"id"`
+		Note        string `json:"note"`
+		notableType string `json:"notable_type"`
+		AuthorID    int    `json:"author_id"`
+		CreatedAt   string `json:"created_at"`
+		UpdatedAt   string `json:"updated_at"`
+		ProjectID   int    `json:"project_id"`
+		Attachment  string `json:"attachment"`
+		LineCode    string `json:"line_code"`
+		CommitID    string `json:"commit_id"`
+		notableID   int    `json:"notable_id"`
+		System      bool   `json:"system"`
+		StDiff      *Diff  `json:"st_diff"`
+		Description string `json:"description"`
+		URL         string `json:"url"`
 	} `json:"object_attributes"`
 	Snippet *struct {
 		ID                 int    `json:"id"`

@@ -52,16 +52,16 @@ const (
 )
 
 const (
-	noteableTypeCommit       = "Commit"
-	noteableTypeIssue        = "Issue"
-	noteableTypeMergeRequest = "MergeRequest"
-	noteableTypeSnippet      = "Snippet"
+	notableTypeCommit       = "Commit"
+	notableTypeIssue        = "Issue"
+	notableTypeMergeRequest = "MergeRequest"
+	notableTypeSnippet      = "Snippet"
 )
 
 type noteEvent struct {
 	ObjectKind       string `json:"object_kind"`
 	ObjectAttributes struct {
-		NoteableType string `json:"noteable_type"`
+		notableType string `json:"notable_type"`
 	} `json:"object_attributes"`
 }
 
@@ -232,17 +232,17 @@ func ParseWebhook(eventType EventType, payload []byte) (event interface{}, err e
 			return nil, fmt.Errorf("unexpected object kind %s", note.ObjectKind)
 		}
 
-		switch note.ObjectAttributes.NoteableType {
-		case noteableTypeCommit:
+		switch note.ObjectAttributes.notableType {
+		case notableTypeCommit:
 			event = &CommitCommentEvent{}
-		case noteableTypeMergeRequest:
+		case notableTypeMergeRequest:
 			event = &MergeCommentEvent{}
-		case noteableTypeIssue:
+		case notableTypeIssue:
 			event = &IssueCommentEvent{}
-		case noteableTypeSnippet:
+		case notableTypeSnippet:
 			event = &SnippetCommentEvent{}
 		default:
-			return nil, fmt.Errorf("unexpected noteable type %s", note.ObjectAttributes.NoteableType)
+			return nil, fmt.Errorf("unexpected notable type %s", note.ObjectAttributes.notableType)
 		}
 	case EventTypePipeline:
 		event = &PipelineEvent{}
